@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/bg1">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="300dp"
+      android:background="@drawable/background1"
+      android:orientation="vertical">
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/hiiiiii"
+          android:layout_marginTop="56dp"
+          android:layout_gravity="center"/>
+
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Hii User"
+          android:textStyle="bold"
+          android:textSize="40dp"
+          android:textColor="@color/white"
+          android:gravity="center"
+          android:layout_marginTop="5dp"
+          android:typeface="sans"/>
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Welcome Back"
+          android:textSize="25dp"
+          android:gravity="center"
+          android:textStyle="bold"
+          android:textColor="@color/white"
+          android:typeface="sans"
+          android:layout_marginTop="12dp"
+          android:layout_marginBottom="40dp"/>
+
+
+  </LinearLayout>
+
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:backgroundTint="@color/bg3"
+       android:layout_gravity="center"
+       android:id="@+id/updatePhoto"
+       android:layout_marginTop="150dp"
+       android:text="Update Profile Photo"
+       android:textSize="20dp"
+       android:typeface="sans"
+       android:textStyle="bold"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mrkAttendence"
+        android:backgroundTint="@color/bg3"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:text="Mark Your Attendence"
+        android:textSize="20dp"
+        android:typeface="sans"
+        android:textStyle="bold"/>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

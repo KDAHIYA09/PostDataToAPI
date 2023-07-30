@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    android:background="@color/bg1"
+    android:focusable="true"
+    tools:context=".UploadPhotoActivity">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/photo1"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Image"
+        android:id="@+id/btnChange"
+        android:backgroundTint="@color/bg3"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:layout_marginTop="35dp"
+        android:layout_gravity="center"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Image"
+        android:backgroundTint="@color/bg3"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:layout_marginTop="35dp"
+        android:id="@+id/btnUpload"
+        android:layout_gravity="center"/>
+
+
+
+
+</LinearLayout>
