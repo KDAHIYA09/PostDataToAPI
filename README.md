@@ -1,5 +1,5 @@
 # TranslineAssignmentApp
-Here we can upload data and image to any provivded api.
+Here we can upload data and image to any provided api.
 
 # ScreenShots
 ![Screenshot_20230731-134759_Transline_Assignment_app](https://github.com/KDAHIYA09/TranslineAssignmentApp/assets/132060221/12edd375-512e-4421-a661-443b1c2beafa)
