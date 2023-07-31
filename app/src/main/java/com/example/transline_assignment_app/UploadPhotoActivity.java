@@ -37,7 +37,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class UploadPhotoActivity extends AppCompatActivity {
-    private ImageView img;
+    private ImageView img, img1;
     Button btnselectimg, btnUploadImg;
     String path;
     private static final String BASE_URL = "https://x8ki-letl-twmt.n7.xano.io/";
@@ -54,6 +54,17 @@ public class UploadPhotoActivity extends AppCompatActivity {
         img = findViewById(R.id.imageView);
         btnselectimg = findViewById(R.id.btnChange);
         btnUploadImg = findViewById(R.id.btnUpload);
+        img1 = findViewById(R.id.back);
+
+        getSupportActionBar().hide();
+
+        img1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UploadPhotoActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btnselectimg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,6 +82,7 @@ public class UploadPhotoActivity extends AppCompatActivity {
                     ActivityCompat.requestPermissions(UploadPhotoActivity.this,
                             new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
                 }
+
             }
         });
 
@@ -145,27 +157,21 @@ public class UploadPhotoActivity extends AppCompatActivity {
                         int width = uploadResponse.getMeta().getWidth();
                         int height = uploadResponse.getMeta().getHeight();
                         Toast.makeText(UploadPhotoActivity.this, "Upload Succesfull", Toast.LENGTH_SHORT).show();
-                        Log.d("UPLOAD", "Path: " + path);
-                        Log.d("UPLOAD", "Name: " + name);
-                        Log.d("UPLOAD", "Size: " + size);
-                        Log.d("UPLOAD", "Mime: " + mime);
-                        Log.d("UPLOAD", "Width: " + width);
-                        Log.d("UPLOAD", "Height: " + height);
                     }
                     else {
                         // Image upload failed. Handle the server response here.
-                        Log.d("UPLOAD", "Image upload failed.");
+                        Toast.makeText(UploadPhotoActivity.this, "Upload Failed", Toast.LENGTH_SHORT).show();
                     }
                 } else {
                     // Image upload failed due to a network error or other issues.
-                    Log.d("UPLOAD", "Image upload failed.");
+                    Toast.makeText(UploadPhotoActivity.this, "Upload Failed", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(@NonNull Call<UploadResponse> call, @NonNull Throwable t) {
                 // Image upload failed due to a network error or other issues.
-                Log.d("UPLOAD", "Image upload failed.");
+                Toast.makeText(UploadPhotoActivity.this, "Upload Failed", Toast.LENGTH_SHORT).show();
             }
         });
     }

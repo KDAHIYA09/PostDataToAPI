@@ -2,9 +2,11 @@ package com.example.transline_assignment_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -19,7 +21,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MarkAttendenceActivity extends AppCompatActivity {
-
+    ImageView img1;
     private Button postDataBtn;
     private TextView responseTV;
     private ProgressBar loadingPB;
@@ -38,8 +40,17 @@ public class MarkAttendenceActivity extends AppCompatActivity {
         postDataBtn = findViewById(R.id.idBtnPost);
         responseTV = findViewById(R.id.idTVResponse);
         loadingPB = findViewById(R.id.idLoadingPB);
+        img1 = findViewById(R.id.back);
 
         getSupportActionBar().hide();
+
+        img1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MarkAttendenceActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         postDataBtn.setOnClickListener(new View.OnClickListener() {
             @Override
