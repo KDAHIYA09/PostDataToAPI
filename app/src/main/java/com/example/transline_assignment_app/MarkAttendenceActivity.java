@@ -25,6 +25,9 @@ public class MarkAttendenceActivity extends AppCompatActivity {
     private Button postDataBtn;
     private TextView responseTV;
     private ProgressBar loadingPB;
+
+    // Here we have taken constant parameters given in api for uploading
+
     private String parameter1 = "14";
     private String parameter2 = "1690603292851";
     private String parameter4 = "23A Shivaji Marg, Karampura Industrial Area, Karam Pura, Delhi, 110015";
